@@ -11,6 +11,8 @@
 		8F7406092C2A600D009BD620 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7406082C2A600D009BD620 /* ContentView.swift */; };
 		8F74060B2C2A600F009BD620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F74060A2C2A600F009BD620 /* Assets.xcassets */; };
 		8F74060E2C2A600F009BD620 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F74060D2C2A600F009BD620 /* Preview Assets.xcassets */; };
+		8F7406152C2A8102009BD620 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7406142C2A8102009BD620 /* WeatherData.swift */; };
+		8F7406182C2AB47F009BD620 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7406172C2AB47F009BD620 /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		8F7406082C2A600D009BD620 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F74060A2C2A600F009BD620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F74060D2C2A600F009BD620 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F7406142C2A8102009BD620 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		8F7406162C2A9119009BD620 /* WeatherApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherApp.entitlements; sourceTree = "<group>"; };
+		8F7406172C2AB47F009BD620 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		8F7406052C2A600D009BD620 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				8F7406162C2A9119009BD620 /* WeatherApp.entitlements */,
 				8F7406062C2A600D009BD620 /* WeatherAppApp.swift */,
 				8F7406082C2A600D009BD620 /* ContentView.swift */,
+				8F7406142C2A8102009BD620 /* WeatherData.swift */,
+				8F7406172C2AB47F009BD620 /* WeatherViewModel.swift */,
 				8F74060A2C2A600F009BD620 /* Assets.xcassets */,
 				8F74060C2C2A600F009BD620 /* Preview Content */,
 			);
@@ -138,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F7406092C2A600D009BD620 /* ContentView.swift in Sources */,
+				8F7406182C2AB47F009BD620 /* WeatherViewModel.swift in Sources */,
+				8F7406152C2A8102009BD620 /* WeatherData.swift in Sources */,
 				8F7406072C2A600D009BD620 /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherApp/WeatherApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
@@ -298,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherApp/WeatherApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
