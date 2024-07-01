@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6985FC2C32944500B85522 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6985FB2C32944500B85522 /* MapView.swift */; };
 		8F7406072C2A600D009BD620 /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7406062C2A600D009BD620 /* WeatherAppApp.swift */; };
 		8F7406092C2A600D009BD620 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7406082C2A600D009BD620 /* ContentView.swift */; };
 		8F74060B2C2A600F009BD620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F74060A2C2A600F009BD620 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F6985FB2C32944500B85522 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8F7406032C2A600D009BD620 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7406062C2A600D009BD620 /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
 		8F7406082C2A600D009BD620 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,9 +65,10 @@
 				8F7406082C2A600D009BD620 /* ContentView.swift */,
 				8F7406142C2A8102009BD620 /* WeatherData.swift */,
 				8F7406172C2AB47F009BD620 /* WeatherViewModel.swift */,
+				8F7406192C2AF1C1009BD620 /* LocationManager.swift */,
 				8F74060A2C2A600F009BD620 /* Assets.xcassets */,
 				8F74060C2C2A600F009BD620 /* Preview Content */,
-				8F7406192C2AF1C1009BD620 /* LocationManager.swift */,
+				8F6985FB2C32944500B85522 /* MapView.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F7406092C2A600D009BD620 /* ContentView.swift in Sources */,
+				8F6985FC2C32944500B85522 /* MapView.swift in Sources */,
 				8F7406182C2AB47F009BD620 /* WeatherViewModel.swift in Sources */,
 				8F74061A2C2AF1C1009BD620 /* LocationManager.swift in Sources */,
 				8F7406152C2A8102009BD620 /* WeatherData.swift in Sources */,
@@ -290,6 +294,7 @@
 				DEVELOPMENT_TEAM = 59FP2PXRXK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "이 앱은 날씨 정보를 제공하기 위해 귀하의 위치 정보를 사용할 수있습니다. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +325,7 @@
 				DEVELOPMENT_TEAM = 59FP2PXRXK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "이 앱은 날씨 정보를 제공하기 위해 귀하의 위치 정보를 사용할 수있습니다. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
