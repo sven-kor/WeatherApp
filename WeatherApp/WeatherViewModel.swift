@@ -8,9 +8,10 @@
 import Foundation
 import WeatherKit
 import CoreLocation
+
 class WeatherViewModel: ObservableObject {
     @Published var weather: WeatherData?
-    @Published var isLoaing: Bool = false
+    @Published var isLoading: Bool = false
     @Published var error: Error?
     @Published var location: CLLocation
 
@@ -19,23 +20,25 @@ class WeatherViewModel: ObservableObject {
     init(location: CLLocation, weatherService: WeatherService) {
         self.location = location
         self.weatherService = weatherService
+        }
+    
+    @MainActor
+    func updateUI(_ error: Error?, _ isLoading: Bool, _ weather: WeatherData?) async {
+        self.error = error
+        self.weather = weather
+        self.isLoading = isLoading
     }
+    
     func fetchWeather() {
-        isLoaing = true
+        isLoading = true
         error  = nil
         Task {
             do {
                 let fetchWeather = try await weatherService.fetchWeather(for: location)
-                DispatchQueue.main.async {
-                    self.weather = fetchWeather
-                    self.isLoaing = false
-                }
+                await updateUI(nil, false, fetchWeather)
             }
             catch {
-                DispatchQueue.main.async {
-                    self.error = error
-                    self.isLoaing = false
-                }
+               await updateUI(error, true, nil)
             }
         }
     }

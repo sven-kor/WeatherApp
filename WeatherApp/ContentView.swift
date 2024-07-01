@@ -22,55 +22,63 @@ extension WeatherService {
 
 
 struct ContentView: View {
+    
     @State var IsSheetShowing = false
+    @StateObject var viewModel: WeatherViewModel
+    
+    
     var body: some View {
-        Spacer()
-        VStack {
+        if viewModel.isLoading {
+            ProgressView()
+        } else {
             Spacer()
-            Text("온도")
-                .bold()
-                .font(.system(size: 120))
-                .frame(maxWidth: .infinity, alignment: .center)
-            HStack {
+            VStack {
                 Spacer()
-                Text("습도")
+                Text("온도")
+                    .bold()
+                    .font(.system(size: 120))
+                    .frame(maxWidth: .infinity, alignment: .center)
+                HStack {
+                    Spacer()
+                    Text("습도")
                     
-                Spacer()
-                Text("풍속")
-                Spacer()
-            }
-            Spacer()
-            Text("설명란")
-            Spacer()
-            HStack{
-                Spacer()
-                VStack{
-                    Button(action: {
-                        IsSheetShowing = true
-                    }) {
-                        Image(systemName: "location.fill")
-                            .foregroundStyle(.black)
-                            .font(.title)
-                        
-                    }
-                    .sheet(isPresented: $IsSheetShowing) {
-                        Text("위치입력창")
-                    }
-                    .padding(.vertical)
-                    Button(action: {}) {
-                        Image(systemName: "arrow.clockwise")
-                            .foregroundStyle(.black)
-                            .font(.title)
-                        
-                    }
-                    
+                    Spacer()
+                    Text("풍속")
+                    Spacer()
                 }
-                .padding(.horizontal)
+                Spacer()
+                Text("설명란")
+                Spacer()
+                HStack{
+                    Spacer()
+                    VStack{
+                        Button(action: {
+                            IsSheetShowing = true
+                        }) {
+                            Image(systemName: "location.fill")
+                                .foregroundStyle(.black)
+                                .font(.title)
+                            
+                        }
+                        .sheet(isPresented: $IsSheetShowing) {
+                            Text("위치입력창")
+                        }
+                        .padding(.vertical)
+                        Button(action: {}) {
+                            Image(systemName: "arrow.clockwise")
+                                .foregroundStyle(.black)
+                                .font(.title)
+                            
+                        }
+                        
+                    }
+                    .padding(.horizontal)
+                }
+                
             }
-           
+            
+            .padding()
         }
-        
-        .padding()
     }
 }
 

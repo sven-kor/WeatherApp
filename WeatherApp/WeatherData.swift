@@ -21,3 +21,4 @@ struct WeatherData: Codable {
         self.windSpeed = currentWeather.wind.speed.value
     }
 }
+
